@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "costfence"
+version = "0.1.0"
+description = "Real-time spending guard for AI API usage with kill switch"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Arav Singh" }]
+keywords = ["ai", "api", "cost", "budget", "proxy", "openai", "anthropic", "bedrock"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "httpx>=0.25.0",
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+costfence = "costfence.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Arav22/costfence"
+Repository = "https://github.com/Arav22/costfence"
